@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDjTbl0WcHKp0thikbxeaI0Dys-pc8ItvI",
-  authDomain: "barber-queue-app.firebaseapp.com",
-  projectId: "barber-queue-app",
-  storageBucket: "barber-queue-app.firebasestorage.app",
-  messagingSenderId: "53742095142",
-  appId: "1:53742095142:web:69952d2df33ea34bd60fe7",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 // Initialize Firebase
