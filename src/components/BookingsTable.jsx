@@ -8,7 +8,7 @@ import {
   deleteDoc,
   doc,
 } from "firebase/firestore";
-import { db } from "../firebase.js";
+import { db } from "../firebase";
 import { Button, Table } from "react-bootstrap";
 
 export default function BookingsTable() {

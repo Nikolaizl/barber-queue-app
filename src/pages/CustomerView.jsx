@@ -6,7 +6,7 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import { db } from "../firebase.js";
+import { db } from "../firebase";
 import { useEffect, useState } from "react";
 import { Button, Table } from "react-bootstrap";
 import JoinQueueModal from "../components/JoinQueueModal";
