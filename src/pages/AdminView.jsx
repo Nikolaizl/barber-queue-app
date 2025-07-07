@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { auth } from "../firebase";
+import { auth } from "../firebase.js";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { Button } from "react-bootstrap";
 import LoginModal from "../components/LoginModal";
