@@ -71,6 +71,8 @@ export default function BookingsTable() {
                     ? "warning"
                     : b.status === "missed"
                     ? "dark"
+                    : b.status === "serving"
+                    ? "info"
                     : "secondary"
                 }`}
               >
@@ -90,7 +92,15 @@ export default function BookingsTable() {
                 onClick={() => handleUpdateStatus(b.id, "calling")}
                 className="me-1"
               >
-                Call
+                <i class="bi bi-megaphone-fill"></i> Call
+              </Button>
+              <Button
+                variant="info"
+                size="sm"
+                onClick={() => handleUpdateStatus(b.id, "serving")}
+                className="me-1"
+              >
+                <i class="bi bi-scissors"></i> Serving
               </Button>
               <Button
                 variant="success"
@@ -98,7 +108,7 @@ export default function BookingsTable() {
                 onClick={() => handleUpdateStatus(b.id, "done")}
                 className="me-1"
               >
-                Done
+                <i class="bi bi-check-square-fill"></i> Done
               </Button>
               <Button
                 variant="dark"
@@ -106,14 +116,14 @@ export default function BookingsTable() {
                 onClick={() => handleUpdateStatus(b.id, "missed")}
                 className="me-1"
               >
-                Missed
+                <i class="bi bi-emoji-frown-fill"></i> Missed
               </Button>
               <Button
-                variant="danger"
+                variant="outline-danger"
                 size="sm"
                 onClick={() => handleDelete(b.id)}
               >
-                Delete
+                <i class="bi bi-trash"></i> Delete
               </Button>
             </td>
           </tr>

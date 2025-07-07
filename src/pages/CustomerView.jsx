@@ -102,6 +102,8 @@ export default function CustomerView() {
                       ? "warning"
                       : b.status === "missed"
                       ? "dark"
+                      : b.status === "serving"
+                      ? "info"
                       : "secondary"
                   }`}
                 >
